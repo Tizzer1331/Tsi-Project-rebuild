@@ -28,7 +28,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlUT4qvrtfWdRkIGhuQZMFawtAsKd8uh5n-A&usqp=CAU" alt="treasure" />
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlUT4qvrtfWdRkIGhuQZMFawtAsKd8uh5n-A&usqp=CAU" alt="treasure" />
         <p id="openingText">
           Welcome Adventurer, your recent trip to the Caves of Forwick was most profitable, you looted cleanly
           and managed to escape with your life, now your rations runs empty and the gold weighs heavy on your back.
@@ -39,6 +39,9 @@ function App() {
           <NameForm/>
 
       </header>
+      <body>
+
+      </body>
     </div>
   );
 }
