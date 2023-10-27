@@ -1,7 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'; 
+import React from'react';
+import ReactDOM from 'react-dom/client';
 import {deckFetch,deckDraw}from './ApiManager.js'
-import {SaveGame} from './SaveFile.js'
+import {SaveGame,writeSaveGame,readSaveGame} from './SaveFile.js'
 import {NameForm} from './UserInput.js'
 
 function App() {
@@ -19,31 +20,24 @@ function App() {
     "Arkvoodle",
     "Warrior",
     13
-  );
-
+  )
+  writeSaveGame(gameSave1)
+  readSaveGame()
   console.log("game save details:", gameSave1)
 
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlUT4qvrtfWdRkIGhuQZMFawtAsKd8uh5n-A&usqp=CAU" alt="treasure" />
+        <p id="openingText">
           Welcome Adventurer, your recent trip to the Caves of Forwick was most profitable, you looted cleanly
-          and managed to escape with your life, now your pack runs empty and the gold weighs heavy on your back.
+          and managed to escape with your life, now your rations runs empty and the gold weighs heavy on your back.
           You are traversing the forests of the nearby township of Hounds tooth, a town carved into the side of a mountain.
           This is the begining of a choose your own adventure path, you will make the decisions and the action you choose may
           have consequences, but first a few decisions.
         </p>
-        
+          <NameForm/>
 
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );

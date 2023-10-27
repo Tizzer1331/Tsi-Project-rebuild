@@ -15,35 +15,14 @@ class SaveGame{
     }
 }
 
-function writeSaveGame(charName,saveData){
-    // when creating a save game class open and write this as nessecary
-    const fs =require('fs');
-    console.log("creating new Save Game");
-    fs.writeFile(charName+".txt", "SaveData",function(err) {
-        if (err){
-            return console.error(err);
-        }
-        console.log("Save Successful under name " + charName);
-    });
-    fs.close(charName, function(err){
-        if(err){
-            console.log(err);
-        }
-        console.log("File Closed successfully");
-    });
 
-// const fs = require('fs');
-// fs.writeFile('SAVE 1.txt','SAVE DATA GOES HERE',function(err){
-//     if (err) throw err;
-//     console.log("GAME SAVED as Save 1");
-
+function writeSaveGame(saveData){
+localStorage.setItem("saveGameData",JSON.stringify(saveData))
+}
+function readSaveGame(){
+    console.log("READ FILE: "+localStorage.getItem("saveGameData"))
 }
 
-
-// function readSavegame(charName){
-//     // PRIME AREA FOR TESTING
-//     // CHAR NAME CHECKS
-//     const fs = require(fs)
-
-// }
 export {SaveGame}
+export{writeSaveGame}
+export{readSaveGame}
