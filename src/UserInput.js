@@ -1,5 +1,7 @@
 import {useState} from 'react';
 import ReactDom from "react-dom/client";
+import React,{ Component } from 'react'
+
 
 function NameForm(){
 
@@ -22,8 +24,8 @@ function NameForm(){
           />
           </label>
         <label> What is your Profession? 
-        <select  >
-          <option valueProf="Warrior" >Warrior</option>
+        <select onChange={(e)=>setProfession(e.target.profValue)}>
+          <option seleceted valueProf="Warrior" >Warrior</option>
           <option valueProf="Rogue" >Rogue</option> 
           <option valueProf="Wizard"  >Wizard</option> 
         </select>
