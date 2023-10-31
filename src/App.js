@@ -30,18 +30,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlUT4qvrtfWdRkIGhuQZMFawtAsKd8uh5n-A&usqp=CAU" alt="treasure" />
-        <p id="openingText">
-          Welcome Adventurer, your recent trip to the Caves of Forwick was most profitable, you looted cleanly
-          and managed to escape with your life, now your rations runs empty and the gold weighs heavy on your back.
-          You are traversing the forests of the nearby township of Hounds tooth, a town carved into the side of a mountain.
-          This is the begining of a choose your own adventure path, you will make the decisions and the action you choose may
-          have consequences, but first a few decisions.
-        </p>
-          <NameForm/> */}
-
       </header>
-      <body>
+      <body id="BodyText">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlUT4qvrtfWdRkIGhuQZMFawtAsKd8uh5n-A&usqp=CAU" alt="treasure" />
         <p id="openingText">
           Welcome Adventurer, your recent trip to the Caves of Forwick was most profitable, you looted cleanly

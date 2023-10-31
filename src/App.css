@@ -18,7 +18,7 @@
 }
 
 
-.App-header {
+#BodyText{
   background-color: #443730;
   min-height: 100vh;
   display: flex;
@@ -29,7 +29,4 @@
   color: rgb(146, 202, 16);
 }
 
-.App-link {
-  color: #61dafb;
-}
 
