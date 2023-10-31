@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { deckFetch} from './ApiManager.js'
 import { SaveGame, writeSaveGame, readSaveGame } from './SaveFile.js'
-import { NameForm } from './UserInput.js'
+import { NameForm, ProfessionForm } from './UserInput.js'
 
 import { CartChoice1, CartChoice2 } from './CartChoice';
 
@@ -20,7 +20,7 @@ function App() {
   const gameSave1 = new SaveGame(
     "Riddick",
     "Arkvoodle",
-    "Warrior",
+    "Warrior", 
     13
   )
   writeSaveGame(gameSave1)
@@ -51,13 +51,15 @@ function App() {
           have consequences, but first a few decisions.
         </p>
         <NameForm />
+        <ProfessionForm/>
+
         <div>
           <p>
             You come across a torn up cart, a human cry to your left disturbs your musings on whether any reations
             remain in the cart, what would you like to do?
           </p>
-        <button onClick={CartChoice1(deckIdUrl, profession)}>Abandon the cart to help the person in distress</button>
-        <button on Click={CartChoice2(deckIdUrl, profession)}>Ignore the cry and loot the abandoned cart for supplies</button>
+        {/* <button onClick={CartChoice1(deckIdUrl, profession)}>Abandon the cart to help the person in distress</button>
+        <button on Click={CartChoice2(deckIdUrl, profession)}>Ignore the cry and loot the abandoned cart for supplies</button> */}
         </div>
         {/* <CartChoice /> */}
 

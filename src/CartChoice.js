@@ -25,7 +25,7 @@ function CartChoice2(deckIdUrl, profession) {
     console.log("cart Choice 1 triggered")
     let skillDiff = 7
     let cartChoice2Success = false
-    if (profession === "Wizard") {
+    if (profession === "Rogue") {
         skillDiff++
     }
     else {
