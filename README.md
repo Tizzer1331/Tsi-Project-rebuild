@@ -2,6 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Notes of additions
+working Forms
+proper CSSstyling following conventions
+addition of hidden <p>
+
 ## Available Scripts
 
 In the project directory, you can run:

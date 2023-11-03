@@ -2,11 +2,28 @@
 async function deckFetch(deckUrl){
     const response = await fetch('https://www.deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1');
     const newDeck = await response.json();
-    console.log("success?"+newDeck.success);
-    console.log("new deck ID:"+newDeck.deck_id);
-    deckUrl="https://www.deckofcardsapi.com/api/deck/"+newDeck.deck_id+"/draw/?count=1"
-    console.log("IN FUNCTION:"+deckUrl)
+    deckUrl= "https://www.deckofcardsapi.com/api/deck/"+newDeck.deck_id+"/draw/?count=1"
+return (deckUrl)
+    //    console.log("success?"+newDeck.success);
+    //    console.log("new deck ID:"+newDeck.deck_id);
+    //    console.log("IN FUNCTION:"+deckUrl)
 }
+
+
+// PROMISE ATTEMPT
+// function deckFetch(){
+//     return(
+//      new Promise(function(resolve){
+//         fetch('https://www.deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1')
+//         .then(response => response.json())
+//         .then(data => resolve(data.reponse));
+
+//          .then(console.log(data))
+//          .then(resolve(actualDeckUrl="https://www.deckofcardsapi.com/api/deck/"+newDeck.deck_id+"/draw/?count=1"))
+//      })
+//     )
+// }
+
 async function deckDraw(deckUrl,skillReq){
     //Prime real estate for testing code
     let value=0
